@@ -1,0 +1,26 @@
+# Bandit Level 1
+
+## Goal
+Find the password stored in a file called `readme` in the home directory.
+
+## What I learned
+- How to list files using `ls`
+- How to read a file using `cat`
+- What a home directory is
+
+## My Approach
+
+```bash
+# First I listed the files to see what was there
+ls
+
+# Saw a file called readme — read it
+cat readme
+```
+
+## The Result
+The password was printed straight to the screen.
+
+---
+
+*Completed: March 2026*
