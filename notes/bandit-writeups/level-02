@@ -1,0 +1,20 @@
+# Bandit Level 2
+
+## Goal
+Find the password stored in a file called `-` (a dash) in the home directory.
+
+## What I learned
+I learned that dashed filename cannot be read using cat command since the linux understands the file name as a comment, inorder to read the file we have to make the linux understand that its a file 
+
+## My Approach
+
+```bash
+# used cat ./ 
+```
+
+## Why it works
+*./ makes the comment as a file and since it became a file we can now read using cat command*
+
+---
+
+*Completed:*
