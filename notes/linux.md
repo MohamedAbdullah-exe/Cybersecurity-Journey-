@@ -65,12 +65,12 @@ exit
 
 ---
 ## Tricky Filenames
-# Spaces in filename — wrap in quotes or use backslash
+## Spaces in filename — wrap in quotes or use backslash
 cat "my file name"
 cat my\ file\ name
-# Filename starting with dash — use ./ or --
+## Filename starting with dash — use ./ or --
 cat ./-
 cat -- -
-# Tab autocomplete handles weird filenames automatically
-# Start typing the name and press Tab — Linux fills the rest
-# -- means end of flags, everything after is treated as a filename
+## Tab autocomplete handles weird filenames automatically
+## Start typing the name and press Tab — Linux fills the rest
+## -- means end of flags, everything after is treated as a filename
