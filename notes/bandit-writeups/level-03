@@ -1,0 +1,38 @@
+Find the password stored in a hidden file inside the `inhere` directory.
+
+## What I learned
+- How to navigate into directories using `cd`
+- How to use `find` to locate hidden files
+- Hidden files in Linux start with a dot `.`
+
+## My Approach
+
+```bash
+# Moved into the inhere directory
+cd inhere
+
+# Used find to locate the hidden file
+find .
+
+# It returned the hidden file — something like:
+# ...Hiding-From-You
+
+# Read the file using cat
+cat ./...Hiding-From-You
+```
+
+## Why it works
+The `find .` command searches everything in the current directory —
+including hidden files that start with a dot `.`
+Normal `ls` would skip these, but `find` shows everything.
+
+## Key commands learned
+| Command | What it does |
+|---------|-------------|
+| `cd foldername` | Move into a folder |
+| `find .` | Find all files including hidden ones |
+| `cat ./filename` | Read a file in current directory |
+
+---
+
+*Completed: March 2026*
