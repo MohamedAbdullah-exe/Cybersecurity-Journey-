@@ -64,9 +64,17 @@ exit
 - `clear` clears the terminal screen
 
 ---
-## Tricky filenames
+## Tricky Filenames
 
-Spaces in filename → wrap in quotes: cat "my file"
+# Spaces in filename — wrap in quotes or use backslash
+cat "my file name"
+cat my\ file\ name
 
-Filename starting with dash → use ./  : 
-cat ./- -- means end of flags, treat rest as filename
+# Filename starting with dash — use ./ or --
+cat ./-
+cat -- -
+
+# Tab autocomplete handles weird filenames automatically
+# Start typing the name and press Tab — Linux fills the rest
+
+# -- means end of flags, everything after is treated as a filename
