@@ -52,8 +52,9 @@ cybersecurity-journey/
 | 0 | ✅ Done | SSH into a remote server |
 | 1 | ✅ Done | Reading files with `cat` |
 | 2 | ✅ Done  | Reading a dashed files and fileswithspaces using cat./ |
-| 3 | ⏳ Upcoming | — |
-| 4 | ⏳ Upcoming | — |
+| 3 | ✅ Done | find command to locate hidden files |
+| 4 | ✅ Done | handling files with special names |
+| 5 | ✅ Done | find command with multiple conditions |
 
 ## Connect With Me
 - LinkedIn: www.linkedin.com/in/mohamedabdulah
