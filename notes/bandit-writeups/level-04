@@ -1,0 +1,59 @@
+# Bandit Level 4
+
+## Goal
+Find the only human-readable file among many files inside the `inhere` directory.
+
+## What I learned
+- How to use the `file` command to check what type a file is
+- The difference between human-readable and binary files
+- How to read files that start with a dash using `./`
+
+## My Approach
+
+```bash
+# Moved into the inhere directory
+cd inhere
+
+# Checked each file one by one using the file command
+file ./-file00
+file ./-file01
+file ./-file02
+file ./-file03
+file ./-file04
+file ./-file05
+file ./-file06
+file ./-file07
+file ./-file08
+
+# Most returned "data" meaning binary — not readable
+# -file07 returned "ASCII text" — that's the one!
+
+# Read the file
+cat ./-file07
+```
+
+## Why it works
+The `file` command reads a file and tells you what type it is.
+Binary files contain machine data that looks like gibberish to humans.
+ASCII text files contain readable characters — that's where the password lives.
+
+```
+./-file00: data          ← binary, skip
+./-file01: data          ← binary, skip
+./-file07: ASCII text    ← human readable, this is it!
+```
+
+## Key commands learned
+| Command | What it does |
+|---------|-------------|
+| `file ./filename` | Check what type a file is |
+| ASCII text | Human readable file |
+| data | Binary file — not readable |
+
+## What I'd do differently next time
+Use `file ./*` to check all files at once instead of one by one —
+much faster when there are lots of files!
+
+---
+
+*Completed: March 2026*
