@@ -67,5 +67,6 @@ exit
 ## Tricky filenames
 
 Spaces in filename → wrap in quotes: cat "my file"
+
 Filename starting with dash → use ./  : cat ./-
 -- means end of flags, treat rest as filename
