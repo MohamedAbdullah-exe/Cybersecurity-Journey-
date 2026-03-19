@@ -77,7 +77,11 @@ cat -- -
 
 ## find command
 find . -type f              # all files in current folder
+
 find . -name "filename"     # find by name
+
 find . -size 1033c          # find by size in bytes
+
 find . -readable            # human readable files only
+
 find . -type f -size 1033c -readable  # combine conditions
