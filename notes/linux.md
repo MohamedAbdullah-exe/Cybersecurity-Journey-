@@ -76,7 +76,6 @@ cat -- -
 ### -- means end of flags, everything after is treated as a filename
 
 ## find command
-
 find . -type f              # all files in current folder
 find . -name "filename"     # find by name
 find . -size 1033c          # find by size in bytes
