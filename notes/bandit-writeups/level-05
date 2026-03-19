@@ -1,0 +1,60 @@
+# Bandit Level 5
+
+## Goal
+Find the password in a file somewhere under the `inhere` directory that is:
+- Human readable
+- 1033 bytes in size
+- Not executable
+
+## What I learned
+- How to use the `find` command with multiple conditions
+- How to search for files by size, type, and readability
+- How to combine flags to narrow down search results
+
+## My Approach
+
+```bash
+# Moved into the inhere directory
+cd inhere
+
+# Used find with multiple conditions to locate the exact file
+find . -type f -size 1033c -readable
+
+# It returned one file — read it
+cat ./path/to/file
+```
+
+## Breaking down the command
+
+```
+find          ← the search command
+.             ← search from current directory
+-type f       ← only look for files, not folders
+-size 1033c   ← exactly 1033 bytes (c = bytes)
+-readable     ← must be human readable
+```
+
+## Why it works
+Instead of opening every single file manually, `find` lets you give Linux
+a set of conditions and it returns only the files that match all of them.
+This is incredibly useful in real penetration testing when you're navigating
+a system with thousands of files.
+
+## Key commands learned
+| Command | What it does |
+|---------|-------------|
+| `find . -type f` | Find all files in current directory |
+| `find . -size 1033c` | Find file by exact size in bytes |
+| `find . -readable` | Find only human readable files |
+| `find . -type f -size 1033c -readable` | Combine all three conditions |
+
+## Sizes reference
+| Flag | Meaning |
+|------|---------|
+| `1033c` | 1033 bytes |
+| `10k` | 10 kilobytes |
+| `5M` | 5 megabytes |
+
+---
+
+*Completed: March 2026*
