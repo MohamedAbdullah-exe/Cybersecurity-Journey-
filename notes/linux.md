@@ -200,7 +200,7 @@ Stores password hashes — only root can read this.
 ```
 username:$hash:lastchange:min:max:warn:inactive:expire
 ```
-As a pentester — if you can read `/etc/shadow`, you can crack the hashes offline using tools like `hashcat` or `john`.
+ if you can read `/etc/shadow`, you can crack the hashes offline using tools like `hashcat` or `john`.
 
 ```bash
 cat /etc/shadow          # needs root
