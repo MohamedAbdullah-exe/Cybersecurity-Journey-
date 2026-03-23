@@ -1,0 +1,43 @@
+# Bandit Level 7
+
+## Goal
+Find the password stored in data.txt next to the word "millionth".
+The file has millions of lines — reading it manually is impossible.
+
+## What I learned
+- How to use grep to find one specific line in a massive file
+- How to combine cat and grep using the pipe | operator
+
+## My Approach
+
+```bash
+# Used cat to read the file and piped it into grep
+# to find the line containing the word "millionth"
+cat data.txt | grep "millionth"
+
+# grep instantly returned the one line with the password
+```
+
+## Breaking down the command
+
+```
+cat data.txt    ← read the entire file
+|               ← pipe — feed output into next command
+grep "millionth"← find only lines containing this word
+```
+
+## Why this works
+The file has millions of lines but grep scans through all of them
+in milliseconds and returns only the matching line.
+Without grep you would have to read millions of lines manually.
+
+## Key commands learned
+| Command | What it does |
+|---------|-------------|
+| `grep "word" file` | Find lines containing word |
+| `cat file | grep "word"` | Pipe cat output into grep |
+| `|` | Pipe — connects two commands together |
+
+---
+
+*Completed: March 2026*
