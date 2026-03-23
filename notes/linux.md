@@ -250,3 +250,33 @@ find . -size 1033c          # find by size in bytes
 find . -readable            # human readable files only
 
 find . -type f -size 1033c -readable  # combine conditions
+
+
+## 2>/dev/null — hiding errors
+
+Redirects error messages to the trash bin
+Use it to clean up messy output
+
+# Without it — wall of "Permission denied" errors
+# With it — only clean results show
+
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+
+
+## grep — searching inside files
+
+Find lines containing a specific word
+
+grep "word" filename            # basic search
+cat file | grep "word"          # pipe into grep
+grep -i "word" file             # ignore uppercase/lowercase
+grep -n "word" file             # show line numbers too
+grep -r "word" .                # search all files in folder
+
+
+## Pipe |
+
+Connects two commands together
+Takes output of first command and feeds into second
+
+cat file | grep "word"   # read file then search it
