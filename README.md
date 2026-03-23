@@ -55,6 +55,8 @@ cybersecurity-journey/
 | 3 | ✅ Done | find command to locate hidden files |
 | 4 | ✅ Done | handling files with special names |
 | 5 | ✅ Done | find command with multiple conditions |
+| 6 | ✅ Done | find / with user,group,size + 2>/dev/null |
+| 7 | ✅ Done | cat file | grep to search large files |
 
 ## Connect With Me
 - LinkedIn: www.linkedin.com/in/mohamedabdulah
