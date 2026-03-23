@@ -1,0 +1,63 @@
+# Bandit Level 6
+
+## Goal
+Find the password stored somewhere on the server that is:
+- Owned by user bandit7
+- Owned by group bandit6
+- 33 bytes in size
+
+## What I learned
+- How to search the entire server using `/` instead of `.`
+- How to filter by file owner and group using `-user` and `-group`
+- How to hide "Permission denied" errors using `2>/dev/null`
+
+## My Approach
+
+```bash
+# Went back to home directory first
+cd ~
+
+# Listed files to check what's there
+ls -la
+
+# Searched the entire server with specific conditions
+# 2>/dev/null throws away all "Permission denied" errors
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
+
+# It returned one clean result — the file path
+# Read the file using cat
+cat /path/to/file
+```
+
+## Breaking down the command
+
+```
+find           ← search command
+/              ← search entire server (not just current folder)
+-user bandit7  ← file must be owned by user bandit7
+-group bandit6 ← file must be owned by group bandit6
+-size 33c      ← file must be exactly 33 bytes
+2>/dev/null    ← throw all error messages in the bin
+```
+
+## Why 2>/dev/null is important
+Without it, the screen fills up with hundreds of "Permission denied"
+errors that hide the real result. `/dev/null` is Linux's trash bin —
+anything redirected there disappears forever.
+
+```
+Without 2>/dev/null → wall of errors, can't see result
+With 2>/dev/null    → one clean result
+```
+
+## Key commands learned
+| Command | What it does |
+|---------|-------------|
+| `find /` | Search entire server |
+| `-user username` | Filter by file owner |
+| `-group groupname` | Filter by group owner |
+| `2>/dev/null` | Hide all error messages |
+
+---
+
+*Completed: March 2026*
