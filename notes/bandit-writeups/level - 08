@@ -1,0 +1,49 @@
+# Bandit Level 8
+
+## Goal
+Find the password stored in data.txt that is the only line that occurs once.
+The file has many duplicate lines — only one line is unique.
+
+## What I learned
+- How to sort lines alphabetically using `sort`
+- How to remove duplicate lines using `uniq`
+- How to find lines that appear only once using `uniq -u`
+- How to combine commands using pipe |
+
+## My Approach
+
+```bash
+# Used sort to arrange all lines alphabetically
+# then piped into uniq -u to show only the unique line
+sort data.txt | uniq -u
+```
+
+## Breaking down the command
+
+```
+sort data.txt   ← sorts all lines alphabetically
+|               ← pipe — feeds output into next command
+uniq -u         ← shows only lines with NO duplicates
+```
+
+## Why sort first?
+`uniq` only removes duplicates that are next to each other.
+Without sorting first, duplicates scattered through the file
+won't be detected. Sort brings them together, then uniq removes them.
+
+```
+Without sort → uniq misses duplicates scattered through file
+With sort    → all duplicates grouped together, uniq works perfectly
+```
+
+## Key commands learned
+| Command | What it does |
+|---------|-------------|
+| `sort file` | Sort lines alphabetically |
+| `uniq` | Remove duplicate lines |
+| `uniq -u` | Show only lines that appear exactly once |
+| `sort file | uniq -u` | Find the one unique line in a file |
+
+---
+
+*Completed: March 2026*
