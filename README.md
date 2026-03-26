@@ -57,6 +57,10 @@ cybersecurity-journey/
 | 5 | ✅ Done | find command with multiple conditions |
 | 6 | ✅ Done | find / with user,group,size + 2>/dev/null |
 | 7 | ✅ Done | cat file | grep to search large files |
+| 8 | ✅ Done | sort + uniq -u to find unique line |
+| 9 | ✅ Done | strings + grep == to read binary file |
+
+
 
 ## Connect With Me
 - LinkedIn: www.linkedin.com/in/mohamedabdulah
