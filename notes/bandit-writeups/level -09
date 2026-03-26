@@ -1,0 +1,56 @@
+# Bandit Level 9
+
+## Goal
+Find the password stored in data.txt — a binary file.
+The password is one of the few human-readable strings preceded by "=" signs.
+
+## What I learned
+- How to extract readable text from binary files using `strings`
+- How to combine strings with grep to narrow down results
+- Why == appears next to the password (used as a marker)
+- Trial and error is a valid approach — try, see results, refine
+
+## My Approach
+
+```bash
+# First extracted all readable text from the binary file
+strings data.txt
+
+# Got too many results — used grep to narrow it down
+# First tried one = sign
+strings data.txt | grep "="
+
+# Still too many results — refined to ==
+strings data.txt | grep "=="
+
+# One clean result — password found!
+```
+
+## What I learned from trial and error
+First tried `grep "="` — returned too many results.
+Then tried `grep "=="` — returned just the password line.
+
+## Breaking down the command
+
+```
+strings data.txt  ← extract all readable text from binary file
+|                 ← pipe output into grep
+grep "=="         ← find only lines containing ==
+```
+
+## Why == appears
+The password lines were formatted like:
+`========== thepassword`
+The == signs were markers to help identify the real password
+among all the random readable text strings pulled out.
+
+
+## Key commands learned
+| Command | What it does |
+|---------|-------------|
+| `strings file` | Extract readable text from binary file |
+| `strings file | grep "=="` | Find specific readable text in binary |
+
+---
+
+*Completed: March 2026*
