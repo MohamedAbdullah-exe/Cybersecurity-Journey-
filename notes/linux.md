@@ -280,3 +280,12 @@ Connects two commands together
 Takes output of first command and feeds into second
 
 cat file | grep "word"   # read file then search it
+
+## sort |
+
+sort file            → sort lines alphabetically
+sort file | uniq -u  → find the one unique line
+strings file         → extract readable text from binary
+strings file | grep "==" → find specific text in binary
+
+
